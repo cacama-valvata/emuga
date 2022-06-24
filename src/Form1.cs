@@ -114,27 +114,27 @@ namespace emuga
         {
             string results = string.Empty;
 
-            results += "SongName = " + SongName + "\n";
-            results += "SongLength = " + SongLength + " patterns\n";
-            results += "NumSamples = " + NumSamples + "\n";
-            results += "NumPatterns = " + NumPatterns + "\n";
+            results += "SongName = " + SongName + Environment.NewLine;
+            results += "SongLength = " + SongLength + " patterns" + Environment.NewLine;
+            results += "NumSamples = " + NumSamples + Environment.NewLine;
+            results += "NumPatterns = " + NumPatterns + Environment.NewLine;
             results += "PatternPositions = ";
             for (int i = 0; i < SongLength; i++)
             {
                 results += PatternPositions[i] + " ";
             }
-            results += "\n\n";
+            results += Environment.NewLine + Environment.NewLine;
 
             for (int i = 0; i < NumSamples; i++)
             {
-                results += $"Sample {i}:\n";
-                results += "SampleName = " + Samples[i].SampleName + "\n";
-                results += "SampleLength = " + Samples[i].SampleLength + " words\n";
-                results += "SampleFinetune = " + Samples[i].SampleFinetune + "\n";
-                results += "SampleVolume = " + Samples[i].SampleFinetune + "\n";
-                results += "RepeatOffset = " + Samples[i].RepeatOffset + " words\n";
-                results += "RepeatLength = " + Samples[i].RepeatLength + " words\n";
-                results += "\n";
+                results += $"Sample {i}:" + Environment.NewLine;
+                results += "SampleName = " + Samples[i].SampleName + Environment.NewLine;
+                results += "SampleLength = " + Samples[i].SampleLength + " words" + Environment.NewLine;
+                results += "SampleFinetune = " + Samples[i].SampleFinetune + Environment.NewLine;
+                results += "SampleVolume = " + Samples[i].SampleVolume + Environment.NewLine;
+                results += "RepeatOffset = " + Samples[i].RepeatOffset + " words" + Environment.NewLine;
+                results += "RepeatLength = " + Samples[i].RepeatLength + " words" + Environment.NewLine;
+                results += Environment.NewLine;
             }
 
             return results;

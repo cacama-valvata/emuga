@@ -33,7 +33,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenButton = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.StatusLabel = new System.Windows.Forms.Label();
+            this.StatusLabel = new System.Windows.Forms.TextBox();
             this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.TopMenuBar.SuspendLayout();
@@ -93,11 +93,14 @@
             // 
             this.StatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.StatusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StatusLabel.Location = new System.Drawing.Point(3, 33);
+            this.StatusLabel.Location = new System.Drawing.Point(3, 36);
+            this.StatusLabel.Multiline = true;
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Padding = new System.Windows.Forms.Padding(10);
-            this.StatusLabel.Size = new System.Drawing.Size(794, 396);
+            this.StatusLabel.ReadOnly = true;
+            this.StatusLabel.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.StatusLabel.Size = new System.Drawing.Size(794, 390);
             this.StatusLabel.TabIndex = 1;
+            this.StatusLabel.TabStop = false;
             this.StatusLabel.Text = "No MOD file open.";
             // 
             // OpenFileDialog
@@ -128,6 +131,6 @@
         private ToolStripMenuItem OpenButton;
         private ToolStripMenuItem ExitButton;
         private OpenFileDialog OpenFileDialog;
-        private Label StatusLabel;
+        private TextBox StatusLabel;
     }
 }
