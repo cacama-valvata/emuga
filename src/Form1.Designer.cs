@@ -41,11 +41,12 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutPanel1.AutoScroll = true;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.TopMenuBar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.StatusLabel, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -77,20 +78,19 @@
             // OpenButton
             // 
             this.OpenButton.Name = "OpenButton";
-            this.OpenButton.Size = new System.Drawing.Size(180, 22);
+            this.OpenButton.Size = new System.Drawing.Size(112, 22);
             this.OpenButton.Text = "Open...";
             this.OpenButton.Click += new System.EventHandler(this.OpenButton_Click);
             // 
             // ExitButton
             // 
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(180, 22);
+            this.ExitButton.Size = new System.Drawing.Size(112, 22);
             this.ExitButton.Text = "Exit";
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // StatusLabel
             // 
-            this.StatusLabel.AutoSize = true;
             this.StatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.StatusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StatusLabel.Location = new System.Drawing.Point(3, 33);
