@@ -37,7 +37,7 @@ namespace emuga
         public int SongLength { get; set; }
         public int[] PatternPositions { get; set; }
 
-        public int NumSamples { get; set; }     // maximum, will be either 15 or 31 for MOD
+        public int NumSamples { get; set; }     // maximum, will be either 15 or 31 for MOD; 1-indexed
         public Sample[] Samples { get; set; }
 
         public int NumPatterns { get; set; }
@@ -131,7 +131,7 @@ namespace emuga
             }
             results += Environment.NewLine + Environment.NewLine;
 
-            for (int i = 1; i < NumSamples + 1; i++)
+            for (int i = 1; i < 2 /*NumSamples + 1*/; i++)
             {
                 results += $"Sample {i}:" + Environment.NewLine;
                 results += "SampleName = " + Samples[i].SampleName + Environment.NewLine;
@@ -142,6 +142,21 @@ namespace emuga
                 results += "RepeatLength = " + Samples[i].RepeatLength + " words" + Environment.NewLine;
                 results += Environment.NewLine;
             }
+
+            for (int i = 0; i < 1 /*NumPatterns*/; i++) 
+            {
+                results += $"Pattern {i}:" + Environment.NewLine;
+                for (int j = 0; j < 64; j++)
+                {
+                    results += $"{Patterns[i].Channel1[j].Pitch}-{Patterns[i].Channel1[j].SampleNumber}-{Patterns[i].Channel1[j].Effect[0]}\t";
+                    results += $"{Patterns[i].Channel2[j].Pitch}-{Patterns[i].Channel2[j].SampleNumber}-{Patterns[i].Channel2[j].Effect[0]}\t";
+                    results += $"{Patterns[i].Channel3[j].Pitch}-{Patterns[i].Channel3[j].SampleNumber}-{Patterns[i].Channel3[j].Effect[0]}\t";
+                    results += $"{Patterns[i].Channel4[j].Pitch}-{Patterns[i].Channel4[j].SampleNumber}-{Patterns[i].Channel4[j].Effect[0]}\t";
+                    results += Environment.NewLine;
+                }
+                results += Environment.NewLine;
+            }
+            results += Environment.NewLine;
 
             return results;
         }
@@ -240,7 +255,19 @@ namespace emuga
 
         public NotePerChannel(byte[] buffer)
         {
-            //
+            SampleNumber = (buffer[0] & 0xf0) | ((buffer[2] & 0xf0) >> 4);
+
+            byte[] pitch_bytes = new byte[] { (byte)(buffer[0] & 0x0f), buffer[1] };
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(pitch_bytes);
+            }
+            Pitch = BitConverter.ToInt16(pitch_bytes);
+
+            Effect = new int[3];
+            Effect[0] = buffer[2] & 0x0f;
+            Effect[1] = (buffer[3] & 0xf0) >> 4;
+            Effect[2] = buffer[3] & 0x0f;
         }
     }
 }
