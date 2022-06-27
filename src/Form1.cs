@@ -91,7 +91,7 @@ namespace emuga
                 for (int i = 0; i < SongLength; i++)
                 {
                     PatternPositions[i] = buffer[i];
-                    NumPatterns = Math.Max(NumPatterns, PatternPositions[i]);
+                    NumPatterns = Math.Max(NumPatterns, PatternPositions[i] + 1);
                 }
 
                 // M.K.
@@ -106,7 +106,13 @@ namespace emuga
                     }
                 }
 
-                // continue
+                Patterns = new Pattern[NumPatterns];
+                for (int i = 0; i < NumPatterns; i++)
+                {
+                    buffer = new byte[1024];
+                    modfile.Read(buffer, 0, 1024);
+                    Patterns[i] = new Pattern(buffer);
+                }
             }
         }
 
@@ -195,6 +201,34 @@ namespace emuga
         public NotePerChannel[] Channel2 { get; set; }
         public NotePerChannel[] Channel3 { get; set; }
         public NotePerChannel[] Channel4 { get; set; }
+
+        public Pattern(byte[] buffer)
+        {
+            // per one position = 4 notes, 4 bytes each = 64 positions
+            Channel1 = new NotePerChannel[64];
+            Channel2 = new NotePerChannel[64];
+            Channel3 = new NotePerChannel[64];
+            Channel4 = new NotePerChannel[64];
+
+            for (int i = 0; i < 64; i++)
+            {
+                byte[] notechannelbuffer = new byte[4];
+                Array.Copy(buffer, (16 * i + 0), notechannelbuffer, 0, 4);
+                Channel1[i] = new NotePerChannel(notechannelbuffer);
+
+                notechannelbuffer = new byte[4];
+                Array.Copy(buffer, (16 * i + 4), notechannelbuffer, 0, 4);
+                Channel2[i] = new NotePerChannel(notechannelbuffer);
+
+                notechannelbuffer = new byte[4];
+                Array.Copy(buffer, (16 * i + 8), notechannelbuffer, 0, 4);
+                Channel3[i] = new NotePerChannel(notechannelbuffer);
+
+                notechannelbuffer = new byte[4];
+                Array.Copy(buffer, (16 * i + 12), notechannelbuffer, 0, 4);
+                Channel4[i] = new NotePerChannel(notechannelbuffer);
+            }
+        }
     }
 
     public class NotePerChannel
@@ -204,5 +238,9 @@ namespace emuga
         public int Pitch { get; set; }      // called the Period; with finetuning = 0
         public int[] Effect { get; set; }    // length of array will always be 3
 
+        public NotePerChannel(byte[] buffer)
+        {
+            //
+        }
     }
 }
