@@ -67,8 +67,8 @@ namespace emuga
                 SongName = Encoding.UTF8.GetString(buffer[..Array.IndexOf(buffer, Convert.ToByte(0))]);
 
                 // Get info of each sample
-                Samples = new Sample[NumSamples];
-                for (int i = 0; i < NumSamples; i++)    // REDO THIS
+                Samples = new Sample[NumSamples + 1];
+                for (int i = 1; i < NumSamples + 1; i++)
                 {
                     buffer = new byte[30];
                     modfile.Read(buffer, 0, 30);
@@ -125,7 +125,7 @@ namespace emuga
             }
             results += Environment.NewLine + Environment.NewLine;
 
-            for (int i = 0; i < NumSamples; i++)
+            for (int i = 1; i < NumSamples + 1; i++)
             {
                 results += $"Sample {i}:" + Environment.NewLine;
                 results += "SampleName = " + Samples[i].SampleName + Environment.NewLine;
