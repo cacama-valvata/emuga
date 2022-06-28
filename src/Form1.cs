@@ -16,18 +16,58 @@ namespace emuga
         {
             if (OpenFileDialog.ShowDialog() == DialogResult.OK)
             {
-                FileName = OpenFileDialog.FileName;
-
                 StatusLabel.Text = "MOD file loaded. Please wait while it is being processed...";
-                Song = new SongInfo(FileName);
+                Song = new SongInfo(OpenFileDialog.FileName);
+                StatusLabel.Text = "MOD file loaded. Not playing.";
+                SongLabel.Text = Song.SongName;
+                FileLabel.Text = Path.GetFileName(OpenFileDialog.FileName);
 
-                StatusLabel.Text = Song.PrintFileResults();
+                PlayButton.Enabled = true;
             }
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void PlayButton_Click(object sender, EventArgs e)
+        {
+            PauseButton.Enabled = true;
+            StopButton.Enabled = true;
+            RestartButton.Enabled = true;
+            PlayButton.Enabled = false;
+
+            StatusLabel.Text = "Playing MOD file...";
+        }
+
+        private void PauseButton_Click(object sender, EventArgs e)
+        {
+            PauseButton.Enabled = false;
+            PlayButton.Enabled = true;
+
+            StatusLabel.Text = "Paused...";
+        }
+
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            PauseButton.Enabled = false;
+            StopButton.Enabled = false;
+            RestartButton.Enabled = false;
+            PlayButton.Enabled = true;
+
+            StatusLabel.Text = "MOD file loaded. Not playing.";
+        }
+
+        private void RestartButton_Click(object sender, EventArgs e)
+        {
+            PauseButton.Enabled = true;
+            StopButton.Enabled = true;
+            RestartButton.Enabled = true;
+            PlayButton.Enabled = false;
+
+            // Go back to the beginning and start playing
+            StatusLabel.Text = "Playing MOD file...";
         }
     }
 
