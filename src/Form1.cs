@@ -106,6 +106,7 @@ namespace emuga
                     }
                 }
 
+                // Get pattern information
                 Patterns = new Pattern[NumPatterns];
                 for (int i = 0; i < NumPatterns; i++)
                 {
@@ -113,6 +114,16 @@ namespace emuga
                     modfile.Read(buffer, 0, 1024);
                     Patterns[i] = new Pattern(buffer);
                 }
+
+                // Get the binary sample audio
+                for (int i = 1; i < NumSamples + 1; i++)
+                {
+                    buffer = new byte[Samples[i].SampleLength * 2];
+                    modfile.Read(buffer, 0, Samples[i].SampleLength * 2);
+                    Samples[i].SampleAudio = buffer;
+                }
+
+                // End of file
             }
         }
 
