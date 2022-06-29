@@ -4,7 +4,6 @@ namespace emuga
 {
     public partial class Form1 : Form
     {
-        public string? FileName = null;
         public SongInfo? Song = null;
 
         public Form1()
@@ -207,15 +206,14 @@ namespace emuga
                 results += $"Pattern {i}:" + Environment.NewLine;
                 for (int j = 0; j < 64; j++)
                 {
-                    results += $"{Patterns[i].Channel1[j].Pitch}-{Patterns[i].Channel1[j].SampleNumber}-{Patterns[i].Channel1[j].Effect[0]}\t";
-                    results += $"{Patterns[i].Channel2[j].Pitch}-{Patterns[i].Channel2[j].SampleNumber}-{Patterns[i].Channel2[j].Effect[0]}\t";
-                    results += $"{Patterns[i].Channel3[j].Pitch}-{Patterns[i].Channel3[j].SampleNumber}-{Patterns[i].Channel3[j].Effect[0]}\t";
-                    results += $"{Patterns[i].Channel4[j].Pitch}-{Patterns[i].Channel4[j].SampleNumber}-{Patterns[i].Channel4[j].Effect[0]}\t";
+                    for (int k = 0; k < 4; k++)
+                    {
+                        results += $"{Patterns[i].Notes[k, j].Pitch}-{Patterns[i].Notes[k, j].SampleNumber}-{Patterns[i].Notes[k, j].Effect[0]}\t";
+                    }
                     results += Environment.NewLine;
                 }
                 results += Environment.NewLine;
             }
-            results += Environment.NewLine;
 
             return results;
         }
@@ -271,36 +269,21 @@ namespace emuga
 
     public class Pattern
     {
-        public NotePerChannel[] Channel1 { get; set; }
-        public NotePerChannel[] Channel2 { get; set; }
-        public NotePerChannel[] Channel3 { get; set; }
-        public NotePerChannel[] Channel4 { get; set; }
+        public NotePerChannel[,] Notes { get; set; }
 
         public Pattern(byte[] buffer)
         {
             // per one position = 4 notes, 4 bytes each = 64 positions
-            Channel1 = new NotePerChannel[64];
-            Channel2 = new NotePerChannel[64];
-            Channel3 = new NotePerChannel[64];
-            Channel4 = new NotePerChannel[64];
+            Notes = new NotePerChannel[4, 64]; // channel, position
 
             for (int i = 0; i < 64; i++)
             {
-                byte[] notechannelbuffer = new byte[4];
-                Array.Copy(buffer, (16 * i + 0), notechannelbuffer, 0, 4);
-                Channel1[i] = new NotePerChannel(notechannelbuffer);
-
-                notechannelbuffer = new byte[4];
-                Array.Copy(buffer, (16 * i + 4), notechannelbuffer, 0, 4);
-                Channel2[i] = new NotePerChannel(notechannelbuffer);
-
-                notechannelbuffer = new byte[4];
-                Array.Copy(buffer, (16 * i + 8), notechannelbuffer, 0, 4);
-                Channel3[i] = new NotePerChannel(notechannelbuffer);
-
-                notechannelbuffer = new byte[4];
-                Array.Copy(buffer, (16 * i + 12), notechannelbuffer, 0, 4);
-                Channel4[i] = new NotePerChannel(notechannelbuffer);
+                for (int j = 0; j < 4; j++)
+                {
+                    byte[] notechannelbuffer = new byte[4];
+                    Array.Copy(buffer, (16 * i) + (4 * j), notechannelbuffer, 0, 4);
+                    Notes[j, i] = new NotePerChannel(notechannelbuffer);
+                }
             }
         }
     }
