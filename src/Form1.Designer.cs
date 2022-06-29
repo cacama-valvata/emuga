@@ -135,7 +135,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1229, 696);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1229, 693);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -148,7 +148,7 @@
             this.tableLayoutPanel2.Controls.Add(this.StatusLabel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.SongLabel, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 664);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 661);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -203,7 +203,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1223, 625);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1223, 622);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // tableLayoutPanel8
@@ -228,7 +228,7 @@
             this.tableLayoutPanel8.Controls.Add(this.label59, 0, 13);
             this.tableLayoutPanel8.Controls.Add(this.label60, 0, 14);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(918, 3);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 15;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
@@ -246,7 +246,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(302, 619);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(299, 616);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
             // label46
@@ -257,7 +257,7 @@
             this.label46.Location = new System.Drawing.Point(1, 1);
             this.label46.Margin = new System.Windows.Forms.Padding(0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(300, 40);
+            this.label46.Size = new System.Drawing.Size(297, 40);
             this.label46.TabIndex = 0;
             this.label46.Text = "-";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -270,7 +270,7 @@
             this.label47.Location = new System.Drawing.Point(1, 42);
             this.label47.Margin = new System.Windows.Forms.Padding(0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(300, 40);
+            this.label47.Size = new System.Drawing.Size(297, 40);
             this.label47.TabIndex = 1;
             this.label47.Text = "-";
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,7 +283,7 @@
             this.label48.Location = new System.Drawing.Point(1, 83);
             this.label48.Margin = new System.Windows.Forms.Padding(0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(300, 40);
+            this.label48.Size = new System.Drawing.Size(297, 40);
             this.label48.TabIndex = 2;
             this.label48.Text = "-";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,7 +296,7 @@
             this.label49.Location = new System.Drawing.Point(1, 124);
             this.label49.Margin = new System.Windows.Forms.Padding(0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(300, 40);
+            this.label49.Size = new System.Drawing.Size(297, 40);
             this.label49.TabIndex = 3;
             this.label49.Text = "-";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,7 +309,7 @@
             this.label50.Location = new System.Drawing.Point(1, 165);
             this.label50.Margin = new System.Windows.Forms.Padding(0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(300, 40);
+            this.label50.Size = new System.Drawing.Size(297, 40);
             this.label50.TabIndex = 4;
             this.label50.Text = "-";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -322,7 +322,7 @@
             this.label51.Location = new System.Drawing.Point(1, 206);
             this.label51.Margin = new System.Windows.Forms.Padding(0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(300, 40);
+            this.label51.Size = new System.Drawing.Size(297, 40);
             this.label51.TabIndex = 5;
             this.label51.Text = "-";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -335,7 +335,7 @@
             this.label52.Location = new System.Drawing.Point(1, 247);
             this.label52.Margin = new System.Windows.Forms.Padding(0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(300, 40);
+            this.label52.Size = new System.Drawing.Size(297, 40);
             this.label52.TabIndex = 6;
             this.label52.Text = "-";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -348,7 +348,7 @@
             this.label53.Location = new System.Drawing.Point(1, 288);
             this.label53.Margin = new System.Windows.Forms.Padding(0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(300, 40);
+            this.label53.Size = new System.Drawing.Size(297, 40);
             this.label53.TabIndex = 7;
             this.label53.Text = "-";
             this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -361,7 +361,7 @@
             this.label54.Location = new System.Drawing.Point(1, 329);
             this.label54.Margin = new System.Windows.Forms.Padding(0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(300, 40);
+            this.label54.Size = new System.Drawing.Size(297, 40);
             this.label54.TabIndex = 8;
             this.label54.Text = "-";
             this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -374,7 +374,7 @@
             this.label55.Location = new System.Drawing.Point(1, 370);
             this.label55.Margin = new System.Windows.Forms.Padding(0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(300, 40);
+            this.label55.Size = new System.Drawing.Size(297, 40);
             this.label55.TabIndex = 9;
             this.label55.Text = "-";
             this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -387,7 +387,7 @@
             this.label56.Location = new System.Drawing.Point(1, 411);
             this.label56.Margin = new System.Windows.Forms.Padding(0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(300, 40);
+            this.label56.Size = new System.Drawing.Size(297, 40);
             this.label56.TabIndex = 10;
             this.label56.Text = "-";
             this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -400,7 +400,7 @@
             this.label57.Location = new System.Drawing.Point(1, 452);
             this.label57.Margin = new System.Windows.Forms.Padding(0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(300, 40);
+            this.label57.Size = new System.Drawing.Size(297, 40);
             this.label57.TabIndex = 11;
             this.label57.Text = "-";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -413,7 +413,7 @@
             this.label58.Location = new System.Drawing.Point(1, 493);
             this.label58.Margin = new System.Windows.Forms.Padding(0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(300, 40);
+            this.label58.Size = new System.Drawing.Size(297, 40);
             this.label58.TabIndex = 12;
             this.label58.Text = "-";
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -426,7 +426,7 @@
             this.label59.Location = new System.Drawing.Point(1, 534);
             this.label59.Margin = new System.Windows.Forms.Padding(0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(300, 40);
+            this.label59.Size = new System.Drawing.Size(297, 40);
             this.label59.TabIndex = 13;
             this.label59.Text = "-";
             this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -439,7 +439,7 @@
             this.label60.Location = new System.Drawing.Point(1, 575);
             this.label60.Margin = new System.Windows.Forms.Padding(0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(300, 43);
+            this.label60.Size = new System.Drawing.Size(297, 40);
             this.label60.TabIndex = 14;
             this.label60.Text = "-";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -466,7 +466,7 @@
             this.tableLayoutPanel7.Controls.Add(this.label44, 0, 13);
             this.tableLayoutPanel7.Controls.Add(this.label45, 0, 14);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(613, 3);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(308, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 15;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
@@ -484,7 +484,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(299, 619);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(299, 616);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
             // label31
@@ -677,7 +677,7 @@
             this.label45.Location = new System.Drawing.Point(1, 575);
             this.label45.Margin = new System.Windows.Forms.Padding(0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(297, 43);
+            this.label45.Size = new System.Drawing.Size(297, 40);
             this.label45.TabIndex = 14;
             this.label45.Text = "-";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -704,7 +704,7 @@
             this.tableLayoutPanel6.Controls.Add(this.label29, 0, 13);
             this.tableLayoutPanel6.Controls.Add(this.label30, 0, 14);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(308, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(613, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 15;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
@@ -722,7 +722,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(299, 619);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(299, 616);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // label16
@@ -915,7 +915,7 @@
             this.label30.Location = new System.Drawing.Point(1, 575);
             this.label30.Margin = new System.Windows.Forms.Padding(0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(297, 43);
+            this.label30.Size = new System.Drawing.Size(297, 40);
             this.label30.TabIndex = 14;
             this.label30.Text = "-";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -941,7 +941,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label14, 0, 13);
             this.tableLayoutPanel4.Controls.Add(this.label15, 0, 14);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(918, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 15;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
@@ -959,7 +959,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(299, 619);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(302, 616);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label1
@@ -970,7 +970,7 @@
             this.label1.Location = new System.Drawing.Point(1, 1);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 40);
+            this.label1.Size = new System.Drawing.Size(300, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "-";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -983,7 +983,7 @@
             this.label2.Location = new System.Drawing.Point(1, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(297, 40);
+            this.label2.Size = new System.Drawing.Size(300, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "-";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -996,7 +996,7 @@
             this.label3.Location = new System.Drawing.Point(1, 83);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(297, 40);
+            this.label3.Size = new System.Drawing.Size(300, 40);
             this.label3.TabIndex = 2;
             this.label3.Text = "-";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1009,7 +1009,7 @@
             this.label4.Location = new System.Drawing.Point(1, 124);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(297, 40);
+            this.label4.Size = new System.Drawing.Size(300, 40);
             this.label4.TabIndex = 3;
             this.label4.Text = "-";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1022,7 +1022,7 @@
             this.label5.Location = new System.Drawing.Point(1, 165);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(297, 40);
+            this.label5.Size = new System.Drawing.Size(300, 40);
             this.label5.TabIndex = 4;
             this.label5.Text = "-";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1035,7 +1035,7 @@
             this.label6.Location = new System.Drawing.Point(1, 206);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(297, 40);
+            this.label6.Size = new System.Drawing.Size(300, 40);
             this.label6.TabIndex = 5;
             this.label6.Text = "-";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1048,7 +1048,7 @@
             this.label7.Location = new System.Drawing.Point(1, 247);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(297, 40);
+            this.label7.Size = new System.Drawing.Size(300, 40);
             this.label7.TabIndex = 6;
             this.label7.Text = "-";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1061,7 +1061,7 @@
             this.label8.Location = new System.Drawing.Point(1, 288);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(297, 40);
+            this.label8.Size = new System.Drawing.Size(300, 40);
             this.label8.TabIndex = 7;
             this.label8.Text = "-";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1074,7 +1074,7 @@
             this.label9.Location = new System.Drawing.Point(1, 329);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(297, 40);
+            this.label9.Size = new System.Drawing.Size(300, 40);
             this.label9.TabIndex = 8;
             this.label9.Text = "-";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1087,7 +1087,7 @@
             this.label10.Location = new System.Drawing.Point(1, 370);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(297, 40);
+            this.label10.Size = new System.Drawing.Size(300, 40);
             this.label10.TabIndex = 9;
             this.label10.Text = "-";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1100,7 +1100,7 @@
             this.label11.Location = new System.Drawing.Point(1, 411);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(297, 40);
+            this.label11.Size = new System.Drawing.Size(300, 40);
             this.label11.TabIndex = 10;
             this.label11.Text = "-";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1113,7 +1113,7 @@
             this.label12.Location = new System.Drawing.Point(1, 452);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(297, 40);
+            this.label12.Size = new System.Drawing.Size(300, 40);
             this.label12.TabIndex = 11;
             this.label12.Text = "-";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1126,7 +1126,7 @@
             this.label13.Location = new System.Drawing.Point(1, 493);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(297, 40);
+            this.label13.Size = new System.Drawing.Size(300, 40);
             this.label13.TabIndex = 12;
             this.label13.Text = "-";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1139,7 +1139,7 @@
             this.label14.Location = new System.Drawing.Point(1, 534);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(297, 40);
+            this.label14.Size = new System.Drawing.Size(300, 40);
             this.label14.TabIndex = 13;
             this.label14.Text = "-";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1152,7 +1152,7 @@
             this.label15.Location = new System.Drawing.Point(1, 575);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(297, 43);
+            this.label15.Size = new System.Drawing.Size(300, 40);
             this.label15.TabIndex = 14;
             this.label15.Text = "-";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1238,6 +1238,10 @@
             // 
             this.OpenFileDialog.Filter = "MOD files|*.mod|All files|*.*";
             // 
+            // metronome
+            // 
+            this.metronome.Interval = 1000;
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
@@ -1268,7 +1272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 696);
+            this.ClientSize = new System.Drawing.Size(1229, 693);
             this.Controls.Add(this.TopMenuBar);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
