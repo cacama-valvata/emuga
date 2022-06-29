@@ -88,7 +88,7 @@ namespace emuga
         public Sample[] Samples { get; set; }
 
         public int NumPatterns { get; set; }
-        public Pattern[] Patterns { get; set; }
+        public NotePerChannel[,,] Patterns { get; set; }    // pattern, channel, position
 
         public SongInfo(string filename)
         {
@@ -154,12 +154,21 @@ namespace emuga
                 }
 
                 // Get pattern information
-                Patterns = new Pattern[NumPatterns];
+                Patterns = new NotePerChannel[NumPatterns, 4, 64];
                 for (int i = 0; i < NumPatterns; i++)
                 {
                     buffer = new byte[1024];
                     modfile.Read(buffer, 0, 1024);
-                    Patterns[i] = new Pattern(buffer);
+                    
+                    for (int j = 0; j < 64; j++)
+                    {
+                        for (int k = 0; k < 4; k++)
+                        {
+                            byte[] notechannelbuffer = new byte[4];
+                            Array.Copy(buffer, (16 * i) + (4 * j), notechannelbuffer, 0, 4);
+                            Patterns[i, k, j] = new NotePerChannel(notechannelbuffer);
+                        }
+                    }
                 }
 
                 // Get the binary sample audio
@@ -208,7 +217,7 @@ namespace emuga
                 {
                     for (int k = 0; k < 4; k++)
                     {
-                        results += $"{Patterns[i].Notes[k, j].Pitch}-{Patterns[i].Notes[k, j].SampleNumber}-{Patterns[i].Notes[k, j].Effect[0]}\t";
+                        results += $"{Patterns[i, k, j].Pitch}-{Patterns[i, k, j].SampleNumber}-{Patterns[i, k, j].Effect[0]}\t";
                     }
                     results += Environment.NewLine;
                 }
@@ -264,27 +273,6 @@ namespace emuga
             RepeatLength = BitConverter.ToInt16(buffer, idx_replen);
 
             SampleAudio = null; // Is read and set later
-        }
-    }
-
-    public class Pattern
-    {
-        public NotePerChannel[,] Notes { get; set; }
-
-        public Pattern(byte[] buffer)
-        {
-            // per one position = 4 notes, 4 bytes each = 64 positions
-            Notes = new NotePerChannel[4, 64]; // channel, position
-
-            for (int i = 0; i < 64; i++)
-            {
-                for (int j = 0; j < 4; j++)
-                {
-                    byte[] notechannelbuffer = new byte[4];
-                    Array.Copy(buffer, (16 * i) + (4 * j), notechannelbuffer, 0, 4);
-                    Notes[j, i] = new NotePerChannel(notechannelbuffer);
-                }
-            }
         }
     }
 
