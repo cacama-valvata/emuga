@@ -23,6 +23,14 @@ namespace emuga
                 FileLabel.Text = Path.GetFileName(OpenFileDialog.FileName);
 
                 PlayButton.Enabled = true;
+
+                for (int i = 0; i < tableLayoutPanel3.Controls.Count; i++)
+                {
+                    for (int j = 0; j < tableLayoutPanel3.Controls[i].Controls.Count; j++)
+                    {
+                        tableLayoutPanel3.Controls[i].Controls[j].Text = $"{i}:{j}";
+                    }
+                }
             }
         }
 
