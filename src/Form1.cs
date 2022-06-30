@@ -88,7 +88,7 @@ namespace emuga
         public Sample[] Samples { get; set; }
 
         public int NumPatterns { get; set; }
-        public NotePerChannel[,,] Patterns { get; set; }    // pattern, channel, position
+        public NotePerChannel[,,] Patterns { get; set; }    // channel, pattern, position
 
         public SongInfo(string filename)
         {
@@ -154,7 +154,7 @@ namespace emuga
                 }
 
                 // Get pattern information
-                Patterns = new NotePerChannel[NumPatterns, 4, 64];
+                Patterns = new NotePerChannel[4, NumPatterns, 64];
                 for (int i = 0; i < NumPatterns; i++)
                 {
                     buffer = new byte[1024];
@@ -166,7 +166,7 @@ namespace emuga
                         {
                             byte[] notechannelbuffer = new byte[4];
                             Array.Copy(buffer, (16 * i) + (4 * j), notechannelbuffer, 0, 4);
-                            Patterns[i, k, j] = new NotePerChannel(notechannelbuffer);
+                            Patterns[k, i, j] = new NotePerChannel(notechannelbuffer);
                         }
                     }
                 }
@@ -217,7 +217,7 @@ namespace emuga
                 {
                     for (int k = 0; k < 4; k++)
                     {
-                        results += $"{Patterns[i, k, j].Pitch}-{Patterns[i, k, j].SampleNumber}-{Patterns[i, k, j].Effect[0]}\t";
+                        results += $"{Patterns[k, i, j].Pitch}-{Patterns[k, i, j].SampleNumber}-{Patterns[k, i, j].Effect[0]}\t";
                     }
                     results += Environment.NewLine;
                 }
