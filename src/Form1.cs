@@ -278,13 +278,14 @@ namespace emuga
 
     public class NotePerChannel
     {
-        // why would you split the singular byte that holds the sample information, mod???
         public int SampleNumber { get; set; }
         public int Pitch { get; set; }      // called the Period; with finetuning = 0
+        public string PitchDisplay { get; set; }
         public int[] Effect { get; set; }    // length of array will always be 3
 
         public NotePerChannel(byte[] buffer)
         {
+            // why would you split the singular byte that holds the sample information, mod???
             SampleNumber = (buffer[0] & 0xf0) | ((buffer[2] & 0xf0) >> 4);
 
             byte[] pitch_bytes = new byte[] { (byte)(buffer[0] & 0x0f), buffer[1] };
@@ -298,6 +299,91 @@ namespace emuga
             Effect[0] = buffer[2] & 0x0f;
             Effect[1] = (buffer[3] & 0xf0) >> 4;
             Effect[2] = buffer[3] & 0x0f;
+
+            PitchDisplay = TranslatePitch(Pitch);
+        }
+
+        static string TranslatePitch (int pitch)    // this would be best as a binary search
+        {
+            switch(pitch)
+            {
+                case 0:
+                    return "   ";
+                case <= 113:
+                    return "B-3";
+                case <= 120:
+                    return "A#3";
+                case <= 127:
+                    return "A-3";
+                case <= 135:
+                    return "G#3";
+                case <= 143:
+                    return "G-3";
+                case <= 151:
+                    return "F#3";
+                case <= 160:
+                    return "F-3";
+                case <= 170:
+                    return "E-3";
+                case <= 180:
+                    return "D#3";
+                case <= 190:
+                    return "D-3";
+                case <= 202:
+                    return "C#3";
+                case <= 214:
+                    return "C-3";
+                case <= 226:
+                    return "B-2";
+                case <= 240:
+                    return "A#2";
+                case <= 254:
+                    return "A-2";
+                case <= 269:
+                    return "G#2";
+                case <= 285:
+                    return "G-2";
+                case <= 302:
+                    return "F#2";
+                case <= 320:
+                    return "F-2";
+                case <= 339:
+                    return "E-2";
+                case <= 360:
+                    return "D#2";
+                case <= 381:
+                    return "D-2";
+                case <= 404:
+                    return "C#2";
+                case <= 428:
+                    return "C-2";
+                case <= 453:
+                    return "B-1";
+                case <= 480:
+                    return "A#1";
+                case <= 508:
+                    return "A-1";
+                case <= 538:
+                    return "G#1";
+                case <= 570:
+                    return "G-1";
+                case <= 604:
+                    return "F#1";
+                case <= 640:
+                    return "F-1";
+                case <= 678:
+                    return "E-1";
+                case <= 720:
+                    return "D#1";
+                case <= 762:
+                    return "D-1";
+                case <= 808:
+                    return "C#1";
+                case <= 856:
+                    return "C-1";
+                default:
+                    return "   ";
+            }
         }
     }
 }
